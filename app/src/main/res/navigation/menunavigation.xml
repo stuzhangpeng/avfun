@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/menunavigation"
+    app:startDestination="@id/finditem">
+
+    <fragment
+        android:id="@+id/finditem"
+        android:name="com.zhangpeng.avfun.fragment.FoundFragment"
+        tools:layout="@layout/found_fragment" />
+    <fragment
+        android:id="@+id/videoitem"
+        android:name="com.zhangpeng.avfun.fragment.VideoFragment"
+        tools:layout="@layout/video_fragment" />
+    <fragment
+        android:id="@+id/imageitem"
+        android:name="com.zhangpeng.avfun.fragment.ImageFragment"
+        tools:layout="@layout/image_fragment" />
+    <fragment
+        android:id="@+id/homeitem"
+        android:name="com.zhangpeng.avfun.fragment.HomeFragment"
+        tools:layout="@layout/home_fragment" />
+</navigation>

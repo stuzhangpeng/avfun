@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--<androidx.appcompat.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/mytoolbar"
+    android:layout_width="match_parent"
+    android:layout_height="?attr/actionBarSize"
+    android:background="@color/design_default_color_primary"
+    android:gravity="center"
+    app:contentInsetStart="0dp"
+    app:contentInsetEnd="0dp"
+    android:padding="4dp"
+    android:elevation="4dp"
+    android:theme="@style/ThemeOverlay.AppCompat.DayNight.ActionBar"
+    app:popupTheme="@style/ThemeOverlay.AppCompat.DayNight">-->
+    <androidx.appcompat.widget.LinearLayoutCompat
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_gravity="center_vertical"
+       android:gravity="center_vertical"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/picturesaomiaoitem"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:scaleType="fitStart"
+            android:layout_weight="12"
+            android:src="@drawable/saoyisao" />
+        <ImageView
+            android:layout_weight="1"
+            android:id="@+id/settingitem"
+            android:scaleType="fitCenter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/messageinfo"
+            />
+        <ImageView
+            android:scaleType="fitCenter"
+            android:layout_weight="1"
+            android:id="@+id/messageitem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/settingcenter"
+            />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+<!--</androidx.appcompat.widget.Toolbar>-->

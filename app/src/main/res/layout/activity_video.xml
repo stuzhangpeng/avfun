@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <FrameLayout
+        android:id="@+id/playerframe"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#000000"
+        app:layout_constraintDimensionRatio="16:9"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <SurfaceView
+            android:id="@+id/surfaceView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center" />
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center" />
+    </FrameLayout>
+    <include
+        layout="@layout/videocontrollerheader"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintDimensionRatio="16:9"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <include
+        layout="@layout/videocontroller"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintDimensionRatio="16:9"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scrollview"
+        android:layout_width="match_parent"
+        android:fillViewport="true"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@id/playerframe"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/video_play_toolbar"
+       >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:text="视频简介"
+                        android:textSize="20sp"
+                        android:gravity="left"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginBottom="4dp"
+                        android:layout_height="wrap_content">
+                    </TextView>
+                    <io.supercharge.shimmerlayout.ShimmerLayout
+                        android:id="@+id/shimerlayout2"
+                        android:layout_width="match_parent"
+                        android:layout_marginBottom="4dp"
+                        android:layout_height="200dp">
+
+                        <ImageView
+                            android:id="@+id/videopicture"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="fitXY"
+                            tools:src="@tools:sample/avatars" />
+                    </io.supercharge.shimmerlayout.ShimmerLayout>
+
+                    <TextView
+                        android:id="@+id/videotittle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:maxLines="3"
+                        android:layout_marginBottom="4dp"
+                        android:textSize="22sp" />
+
+                    <TextView
+                        android:layout_marginBottom="4dp"
+                        android:id="@+id/textview_category"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:textSize="20sp" />
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+          <!--  <com.google.android.material.tabs.TabLayout
+                android:id="@+id/menutablayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:tabIndicatorColor="#00ff00"
+                app:tabIndicatorFullWidth="false"
+                app:tabSelectedTextColor="@color/black">
+
+                <com.google.android.material.tabs.TabItem
+                    android:id="@+id/tabItem"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:icon="@drawable/favourite"
+                    android:text="收藏" />
+
+                <com.google.android.material.tabs.TabItem
+                    android:id="@+id/downloadtab"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:icon="@drawable/download"
+                    android:text="下载" />
+
+                <com.google.android.material.tabs.TabItem
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:icon="@drawable/videoshare"
+                    android:text="分享" />
+
+                <com.google.android.material.tabs.TabItem
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:icon="@drawable/requirevideo"
+                    android:text="求片反馈" />
+
+            </com.google.android.material.tabs.TabLayout>-->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="4dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="4dp"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/textView7s"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="猜你喜欢"
+                    android:textSize="20sp" />
+
+                <com.zhangpeng.avfun.view.RecyclerViewAtViewPager2
+                    android:id="@+id/guessfavourite"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                </com.zhangpeng.avfun.view.RecyclerViewAtViewPager2>
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/video_play_toolbar"
+        app:contentInsetStart="0dp"
+        app:contentInsetEnd="0dp"
+        android:padding="4dp"
+        android:layout_width="match_parent"
+        android:background="@color/white"
+        android:elevation="4dp"
+        android:layout_height="50dp"
+        android:theme="@style/Theme.MaterialComponents.Light"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:popupTheme="@style/Theme.MaterialComponents.Light" >
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:gravity="center"
+            android:padding="4dp"
+            android:layout_height="match_parent">
+            <TextView
+                android:padding="6dp"
+                android:id="@+id/comment"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/comment_round_edittext"
+                android:drawableLeft="@drawable/comment"
+                android:layout_marginRight="4dp"
+                android:gravity="center"
+                android:text="写评论..."
+                />
+            <ImageView
+                android:layout_weight="1"
+                android:id="@+id/see_comment"
+                android:layout_width="wrap_content"
+                android:src="@drawable/see_comment"
+                android:layout_marginRight="4dp"
+                android:layout_gravity="left|center_vertical"
+                android:layout_height="match_parent"
+                android:scaleType="fitCenter"
+                tools:ignore="MissingConstraints">
+            </ImageView>
+            <ImageView
+                android:layout_weight="1"
+                android:id="@+id/support"
+                android:layout_width="wrap_content"
+                android:src="@drawable/zan"
+                android:layout_marginRight="4dp"
+                android:layout_gravity="left|center_vertical"
+                android:layout_height="match_parent"
+                android:scaleType="fitCenter"
+                tools:ignore="MissingConstraints">
+            </ImageView>
+            <ImageView
+                android:layout_weight="1"
+                android:id="@+id/favourite"
+                android:layout_width="wrap_content"
+                android:src="@drawable/favourite"
+                android:layout_marginRight="4dp"
+                android:layout_gravity="left|center_vertical"
+                android:layout_height="match_parent"
+                android:scaleType="fitCenter"
+                tools:ignore="MissingConstraints">
+            </ImageView>
+            <ImageView
+                android:layout_weight="1"
+                android:id="@+id/download"
+                android:layout_width="wrap_content"
+                android:src="@drawable/download"
+                android:layout_marginRight="4dp"
+                android:layout_gravity="left|center_vertical"
+                android:layout_height="match_parent"
+                android:scaleType="fitCenter"
+                tools:ignore="MissingConstraints">
+            </ImageView>
+            <ImageView
+                android:layout_weight="1"
+                android:id="@+id/share"
+                android:layout_width="wrap_content"
+                android:src="@drawable/share"
+                android:layout_gravity="left|center_vertical"
+                android:layout_height="match_parent"
+                android:scaleType="fitCenter"
+                tools:ignore="MissingConstraints">
+            </ImageView>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </androidx.appcompat.widget.Toolbar>
+</androidx.constraintlayout.widget.ConstraintLayout>

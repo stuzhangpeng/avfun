@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/finditem"
+        android:icon="@drawable/explore"
+        android:title="发现"
+        android:visible="true" />
+    <item
+        android:id="@+id/videoitem"
+        android:icon="@drawable/video"
+        android:title="视频"
+        android:visible="true" />
+    <item
+        android:id="@+id/imageitem"
+        android:icon="@drawable/image"
+        android:title="写真"
+        android:visible="true" />
+    <item
+        android:id="@+id/homeitem"
+        android:icon="@drawable/accounthome"
+        android:title="我的"
+        android:visible="true" />
+</menu>

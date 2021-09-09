@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/mytoolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:paddingLeft="4dp"
+        android:paddingRight="4dp"
+        android:background="@color/design_default_color_primary"
+        app:contentInsetStart="0dp"
+        app:contentInsetEnd="0dp"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.DayNight.ActionBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.DayNight" >
+        <androidx.appcompat.widget.LinearLayoutCompat
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:id="@+id/linerlayoutcompat"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical"
+            android:layout_height="match_parent">
+        <ImageView
+            android:id="@+id/loginimageViews"
+            android:layout_width="66dp"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            android:layout_marginRight="4dp"
+           android:src="@drawable/rion" />
+        <TextView
+            android:padding="6dp"
+            android:id="@+id/searchitem"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/search_top_round"
+            android:drawableLeft="@drawable/searchicon"
+            android:gravity="center"
+            />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+       <!-- <androidx.appcompat.widget.LinearLayoutCompat
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:gravity="center"
+            android:layout_height="match_parent">
+            <ImageView
+                android:id="@+id/picturesaomiaoitem"
+                android:layout_height="match_parent"
+                android:layout_width="wrap_content"
+                android:scaleType="fitStart"
+                android:layout_weight="12"
+                android:src="@drawable/ic_baseline_qr_code_24" />
+            <ImageView
+                android:layout_weight="1"
+                android:id="@+id/settingitem"
+                android:scaleType="fitCenter"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:src="@drawable/messageinfo"
+                />
+            <ImageView
+                android:scaleType="fitCenter"
+                android:layout_weight="1"
+                android:id="@+id/messageitem"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:src="@drawable/settingcenter"
+                />
+        </androidx.appcompat.widget.LinearLayoutCompat>-->
+    </androidx.appcompat.widget.Toolbar>
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fragment3"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:defaultNavHost="true"
+        app:layout_constrainedHeight="true"
+        app:layout_constraintBottom_toTopOf="@id/bottomNavigationView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/mytoolbar"
+        app:layout_constraintVertical_bias="0.0"
+        app:navGraph="@navigation/menunavigation" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:labelVisibilityMode="labeled"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/navbarmenu">
+
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
